@@ -1,12 +1,30 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">Home</router-link>
+      <!-- <rickAndMortyAPI name="Parth" @pepe="getPepe"/> -->
       <router-link to="/about">About</router-link>
     </nav>
     <router-view/>
   </div>
 </template>
+
+<script>
+import rickAndMortyAPI from './components/rickAndMortyAPI.vue';
+
+export default {
+  name: 'App',
+  components: {
+    rickAndMortyAPI
+  },
+  // methods: {
+  //   getPepe(item) {
+  //     console.log(item)
+  //   }
+  // }
+}
+
+</script>
 
 <style>
 #app {
@@ -15,6 +33,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: gray;
 }
 
 nav {
@@ -23,10 +42,10 @@ nav {
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: silver;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: gold;
 }
 </style>
